@@ -1,0 +1,9 @@
+[
+    {
+        "title": "hello",
+        "author": "adithya",
+        "isbn": "12345",
+        "total_copies": 4,
+        "available_copies": 4
+    }
+]
