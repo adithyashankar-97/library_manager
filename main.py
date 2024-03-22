@@ -127,7 +127,8 @@ def main():
             check_in_out_manager.check_out_book(isbn, user_id)
         elif choice == '4':
             isbn = input("Enter the ISBN of the book to check in: ")
-            check_in_out_manager.check_in_book(isbn)
+            user_id = input("Enter the user ID: ")
+            check_in_out_manager.check_in_book(isbn, user_id)
         elif choice == '5':
             break
         else:
