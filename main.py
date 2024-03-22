@@ -49,12 +49,11 @@ def manage_books(book_manager):
             results = book_manager.search_books(isbn, title, author)
             print("Search results:")
             for book in results:
-                print(f"ISBN: {book.isbn}, Title: {book.title}, Author: {book.author}, Total Copies: {book.total_copies}, Checked Out: {book.checked_out}")
+                print(f"ISBN: {book.isbn}, Title: {book.title}, Author: {book.author}, Total Copies: {book.total_copies}, Available Copies: {book.available_copies}")
         elif choice == '5':
-            books = book_manager.list_books()
             print("List of all books:")
-            for book in books:
-                print(f"ISBN: {book.isbn}, Title: {book.title}, Author: {book.author}, Total Copies: {book.total_copies}, Checked Out: {book.checked_out}")
+            for book in book_manager.books:
+                print(f"ISBN: {book.isbn}, Title: {book.title}, Author: {book.author}, Total Copies: {book.total_copies}, Available Copies: {book.available_copies}")
         elif choice == '6':
             break
         else:
