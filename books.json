@@ -13,7 +13,7 @@
         "author": "adithya2",
         "isbn": "999",
         "total_copies": 2,
-        "available_copies": 1,
+        "available_copies": 2,
         "max_loan_period": 14,
         "per_day_fine": 10
     }

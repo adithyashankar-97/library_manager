@@ -50,7 +50,7 @@ class CheckInOutManager:
 
         user.checked_out.remove(isbn)
         for act in user.activity:
-            if act['isbn'] == isbn:
+            if act['isbn'] == isbn and act['check_in_date'] is None:
                 act['check_in_date'] = datetime.now().strftime('%Y-%m-%d')
 
         print(f"Book '{book.title}' has been successfully checked in.")

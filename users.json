@@ -2,16 +2,14 @@
     {
         "user_id": "2",
         "name": "adithya2",
-        "checked_out": [
-            "999"
-        ],
+        "checked_out": [],
         "activity": [
             {
                 "act_id": "ekCHoi",
                 "check_out_date": "2024-03-24",
                 "due_date": "2024-04-07",
                 "isbn": "999",
-                "check_in_date": null
+                "check_in_date": "2024-03-24"
             }
         ]
     },
