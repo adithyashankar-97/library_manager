@@ -11,7 +11,7 @@ class UserManager:
     """
 
     def __init__(self):
-        self.storage = Storage('users.json')
+        self.storage = Storage('storage/users.json')
         self.users = self.load_users()
 
     def load_users(self):

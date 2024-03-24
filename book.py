@@ -11,7 +11,7 @@ class BookManager:
     """
 
     def __init__(self):
-        self.storage = Storage('books.json')
+        self.storage = Storage('storage/books.json')
         self.books = self.load_books()
 
     def load_books(self):

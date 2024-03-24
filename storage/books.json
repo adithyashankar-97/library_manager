@@ -4,7 +4,7 @@
         "author": "adithya",
         "isbn": "12345",
         "total_copies": 4,
-        "available_copies": 4,
+        "available_copies": 3,
         "max_loan_period": 14,
         "per_day_fine": 10
     },

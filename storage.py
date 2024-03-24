@@ -1,7 +1,9 @@
 import json
+import os
 
 class Storage:
     def __init__(self, file_name):
+        os.makedirs('storage', exist_ok=True)
         self.file_name = file_name
 
     def read_data(self):

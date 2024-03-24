@@ -34,5 +34,22 @@
                 "fine": 170
             }
         ]
+    },
+    {
+        "user_id": "66",
+        "name": "user66",
+        "checked_out": [
+            "12345"
+        ],
+        "activity": [
+            {
+                "act_id": "PFNhlq",
+                "check_out_date": "2024-03-24",
+                "due_date": "2024-04-07",
+                "isbn": "12345",
+                "check_in_date": null,
+                "fine": null
+            }
+        ]
     }
 ]
