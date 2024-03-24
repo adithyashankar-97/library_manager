@@ -1,0 +1,12 @@
+[
+    {
+        "act_id": "MGFDmB",
+        "check_out_date": "2024-03-24",
+        "due_date": "2024-04-07",
+        "isbn": "12345",
+        "check_in_date": null,
+        "fine": null,
+        "user_id": "1",
+        "activity_type": "CHECK_IN"
+    }
+]
