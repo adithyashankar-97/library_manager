@@ -11,13 +11,14 @@ class Book:
         self.per_day_fine = per_day_fine
 
 class Activity:
-    def __init__(self, act_id, isbn, check_out_date, check_in_date=None, max_loan_period = 14):
+    def __init__(self, act_id, isbn, check_out_date, check_in_date=None, max_loan_period = 14, fine=None):
         self.act_id = act_id
         self.check_out_date = check_out_date
         self.due_date = (self.check_out_date + timedelta(days=max_loan_period)).strftime('%Y-%m-%d')
         self.check_out_date = (self.check_out_date).strftime('%Y-%m-%d')
         self.isbn = isbn
         self.check_in_date = None
+        self.fine = None
 
     def return_act(self):
         # self.due_date = self.due_

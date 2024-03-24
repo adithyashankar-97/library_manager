@@ -43,7 +43,6 @@ class CheckInOutManager:
             return False
 
         book.available_copies += 1
-        print(user.__dict__)
         if isbn not in user.checked_out:
             print("User: {} has not checked out this book with ISBN: {}".format(user_id, isbn))
             return False
@@ -52,8 +51,12 @@ class CheckInOutManager:
         for act in user.activity:
             if act['isbn'] == isbn and act['check_in_date'] is None:
                 act['check_in_date'] = datetime.now().strftime('%Y-%m-%d')
+                act['fine'] = get_fine(act, book)
 
         print(f"Book '{book.title}' has been successfully checked in.")
         self.book_manager.save_books()
         self.user_manager.save_users()
         return True
+
+def get_fine(act, book):
+    return max(0, (datetime.strptime(act['check_in_date'],'%Y-%m-%d') - datetime.strptime(act['due_date'],'%Y-%m-%d')).days*book.per_day_fine)
