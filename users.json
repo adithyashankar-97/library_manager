@@ -2,6 +2,31 @@
     {
         "user_id": "2",
         "name": "adithya2",
-        "checked_out": []
+        "checked_out": [
+            "999"
+        ],
+        "activity": [
+            {
+                "act_id": "ekCHoi",
+                "check_out_date": "2024-03-24",
+                "due_date": "2024-04-07",
+                "isbn": "999",
+                "check_in_date": null
+            }
+        ]
+    },
+    {
+        "user_id": "1",
+        "name": "adithya1",
+        "checked_out": [],
+        "activity": [
+            {
+                "act_id": "kzlDJs",
+                "check_out_date": "2024-03-24",
+                "due_date": "2024-04-07",
+                "isbn": "12345",
+                "check_in_date": "2024-03-24"
+            }
+        ]
     }
 ]

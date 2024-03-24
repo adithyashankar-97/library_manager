@@ -1,3 +1,8 @@
+from models import Activity
+import random
+import string 
+from datetime import datetime
+
 class CheckInOutManager:
     def __init__(self, book_manager, user_manager):
         self.book_manager = book_manager
@@ -16,7 +21,10 @@ class CheckInOutManager:
             return False
 
         book.available_copies -= 1
+        act_id = ''.join(random.choice(string.ascii_letters) for i in range(6))
+        activity = Activity(act_id, book.isbn, datetime.now())
         user.checked_out.append(book.isbn)
+        user.activity.append(activity.__dict__)
         print(f"Book '{book.title}' checked out to user '{user.name}'.")
         self.book_manager.save_books()
         self.user_manager.save_users()
@@ -35,7 +43,16 @@ class CheckInOutManager:
             return False
 
         book.available_copies += 1
+        print(user.__dict__)
+        if isbn not in user.checked_out:
+            print("User: {} has not checked out this book with ISBN: {}".format(user_id, isbn))
+            return False
+
         user.checked_out.remove(isbn)
+        for act in user.activity:
+            if act['isbn'] == isbn:
+                act['check_in_date'] = datetime.now().strftime('%Y-%m-%d')
+
         print(f"Book '{book.title}' has been successfully checked in.")
         self.book_manager.save_books()
         self.user_manager.save_users()
